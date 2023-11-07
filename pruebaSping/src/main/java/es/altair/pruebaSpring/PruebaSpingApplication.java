@@ -1,4 +1,4 @@
-package es.altair.pruebaSping;
+package es.altair.pruebaSpring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -18,7 +18,7 @@ public class Acceso {
 	@Column(name="codigo_acceso", nullable=false)
 	private String codigo_acceso;
 	
-	@Column(name="descipcion_acceso", nullable=false)
+	@Column(name="descripcion", nullable=false)
 	private String descripcion;
 
 	public long getId_acceso() {
