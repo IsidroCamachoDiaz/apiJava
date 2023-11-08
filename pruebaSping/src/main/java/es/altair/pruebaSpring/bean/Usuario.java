@@ -40,7 +40,7 @@ public class Usuario {
 	@Column(name="email_usuario", nullable=false)
 	private String email_usuario;
 	
-	@Column(name="establoqueado_usuario", nullable=false)
+	@Column(name="esta_bloqueado_usuario", nullable=false)
 	private boolean establoqueado_usuario;
 	
 	@Column(name="fch_fin_bloqueo_usuario")
@@ -203,6 +203,8 @@ public class Usuario {
 	public void setAcceso(Acceso acceso) {
 		this.acceso = acceso;
 	}
+	
+	
 	
 	
 	

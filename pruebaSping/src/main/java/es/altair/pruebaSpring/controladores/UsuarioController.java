@@ -40,11 +40,19 @@ public class UsuarioController {
 		     }
 		  
 		  @PutMapping("/{id}")   
-		     public void update(@PathVariable Long id,@RequestBody Acceso acceso )
+		     public void update(@PathVariable Long id,@RequestBody Usuario u2 )
 		     {
-			  Acceso a=usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
-		     a.setCodigo_acceso(acceso.getCodigo_acceso());
-		     a.setDescripcion(acceso.getDescripcion());
-		     usuarioRepository.save(a);
+			  Usuario u=usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
+		     u.setAcceso(u.getAcceso());
+		     u.setApellidos_usuario(u2.getApellidos_usuario());
+		     u.setClave_usuario(u2.getClave_usuario());
+		     u.setDni_usuario(u2.getDni_usuario());
+		     u.setEstabloqueado_usuario(u2.isEstabloqueado_usuario());
+		     u.setFch_alta_usuario(u2.getFch_alta_usuario());
+		     u.setFch_baja_usuario(u2.getFch_baja_usuario());
+		     u.setFch_fin_bloqueo_usuario(u2.getFch_fin_bloqueo_usuario());
+		     u.setNombre_usuario(u2.getNombre_usuario());
+		     u.setTlf_usuario(u2.getTlf_usuario());
+		     usuarioRepository.save(u);
 		     }
 }
