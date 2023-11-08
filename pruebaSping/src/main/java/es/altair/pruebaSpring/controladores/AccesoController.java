@@ -48,8 +48,4 @@ public class AccesoController {
 	     a.setDescripcion(acceso.getDescripcion());
 		  accesoRepository.save(a);
 	     }
-	
-	  
-	  
-
 }
